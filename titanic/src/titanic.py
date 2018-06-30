@@ -2,13 +2,21 @@
 
 import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt
+import re
+import sklearn
+import xgboost as xgb
 import seaborn as sns
-from subprocess import check_output
-from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
-from sklearn.model_selection import cross_val_score, GridSearchCV
+import matplotlib.pyplot as plt
 
-train = pd.read_csv("../input/train.csv")
-test = pd.read_csv("../input/test.csv")
+import warnings
+warnings.filterwarnings('ignore')
 
-print(train.head())
+from sklearn.ensemble import (RandomForestClassifier, AdaBoostClassifier,
+                              GradientBoostingClassifier, ExtraTreesClassifier)
+
+import titanicDataset
+
+titanic_dataset = titanicDataset.titanicDataset()
+
+print(titanic_dataset.train.head(3))
+print(titanic_dataset.test.head(3))

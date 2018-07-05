@@ -1,4 +1,4 @@
-#!/home/ronald/dev/kaggle-machine-learning/virtualenv/bin/python3
+#!/usr/bin/python3
 
 import pandas as pd
 import numpy as np
@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 from sklearn.ensemble import (RandomForestClassifier, AdaBoostClassifier,
                               GradientBoostingClassifier, ExtraTreesClassifier)
 
-import titanicDataset
+import titanicDataset # Titanic dataset loader lib
 
 titanic_dataset = titanicDataset.titanicDataset()
 
